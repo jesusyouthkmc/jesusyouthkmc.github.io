@@ -253,6 +253,17 @@
       animation: none;
       transform: scale(1.05);
     }
+    
+    /* Coming soon badge */
+    .coming-soon-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body class="glossy-orange-bg">
@@ -271,6 +282,9 @@
         <a href="#home" class="text-white hover:text-amber-200 transition">Home</a>
         <a href="#gathering" class="text-white hover:text-amber-200 transition">Gathering</a>
         <a href="#ministries" class="text-white hover:text-amber-200 transition">Ministries</a>
+        <a href="gallery.html" class="text-white hover:text-amber-200 transition">
+          Gallery <span class="coming-soon-badge">Soon</span>
+        </a>
         <a href="#resources" class="text-white hover:text-amber-200 transition">Resources</a>
         <a href="#join" class="text-white hover:text-amber-200 transition">Join</a>
       </nav>
@@ -297,6 +311,10 @@
       <a href="#ministries" class="mobile-nav-link">
         <i class="fas fa-church"></i>
         <span>Ministries</span>
+      </a>
+      <a href="gallery.html" class="mobile-nav-link">
+        <i class="fas fa-images"></i>
+        <span>Gallery <span class="coming-soon-badge">Soon</span></span>
       </a>
       <a href="#resources" class="mobile-nav-link">
         <i class="fas fa-download"></i>
@@ -360,7 +378,7 @@
     <section id="jesus-youth-movement" class="py-20 md:py-28">
       <div class="max-w-4xl mx-auto px-5 md:px-8">
         <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg fade-up border border-white/30 text-center">
-          <!-- Clickable Logo - Made smaller -->
+          <!-- Clickable Logo -->
           <a href="https://jesusyouth.org/" target="_blank" rel="noopener noreferrer" class="inline-block mb-6 transition-transform hover:scale-105">
             <img src="jesus-youth-logo.png" alt="Jesus Youth International" class="w-28 md:w-36 h-auto mx-auto">
           </a>
