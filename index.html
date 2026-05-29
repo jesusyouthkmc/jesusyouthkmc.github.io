@@ -55,23 +55,31 @@
       transform: translateY(-6px);
       box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
     }
-    /* Mobile menu with orange theme */
-    .mobile-menu-glass {
-      background: rgba(255, 140, 66, 0.98);
+    /* New Sidebar Menu - Left aligned, 3/4 width, semi-transparent white */
+    .sidebar-menu {
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
+      width: 75%;
+      box-shadow: 5px 0 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease-in-out;
     }
-    /* Hero image container */
-    .hero-image-container {
-      max-width: 100%;
-      overflow: hidden;
-      border-radius: 0 0 40px 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    .sidebar-menu a {
+      color: #FF6B35;
+      font-weight: 600;
+      padding: 14px 20px;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .hero-image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
+    .sidebar-menu a:hover {
+      background: rgba(255, 107, 53, 0.1);
+      transform: translateX(5px);
+    }
+    .sidebar-menu i {
+      width: 24px;
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -95,17 +103,33 @@
         <i class="fas fa-bars"></i>
       </button>
     </div>
-    <!-- mobile menu drawer -->
-    <div id="mobileMenu" class="fixed top-0 left-0 w-full h-screen mobile-menu-glass z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    
+    <!-- New Sidebar Menu - Left aligned, 3/4 width -->
+    <div id="mobileMenu" class="fixed top-0 left-0 h-full sidebar-menu z-50 transform -translate-x-full md:hidden">
       <div class="flex justify-end p-5">
-        <button id="closeMenu" class="text-3xl text-white">&times;</button>
+        <button id="closeMenu" class="text-3xl text-orange-600">&times;</button>
       </div>
-      <nav class="flex flex-col items-center gap-6 text-xl font-semibold mt-10">
-        <a href="#home" class="mobile-nav-link text-white hover:text-amber-200">Home</a>
-        <a href="#gathering" class="mobile-nav-link text-white hover:text-amber-200">Gathering</a>
-        <a href="#ministries" class="mobile-nav-link text-white hover:text-amber-200">Ministries</a>
-        <a href="#resources" class="mobile-nav-link text-white hover:text-amber-200">Resources</a>
-        <a href="#join" class="mobile-nav-link text-white hover:text-amber-200">Join</a>
+      <nav class="flex flex-col gap-3 px-6 py-4">
+        <a href="#home" class="mobile-nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#gathering" class="mobile-nav-link">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Gathering</span>
+        </a>
+        <a href="#ministries" class="mobile-nav-link">
+          <i class="fas fa-church"></i>
+          <span>Ministries</span>
+        </a>
+        <a href="#resources" class="mobile-nav-link">
+          <i class="fas fa-download"></i>
+          <span>Resources</span>
+        </a>
+        <a href="#join" class="mobile-nav-link">
+          <i class="fas fa-users"></i>
+          <span>Join</span>
+        </a>
       </nav>
     </div>
   </header>
