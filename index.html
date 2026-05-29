@@ -228,6 +228,31 @@
       background: rgba(255, 107, 53, 0.25);
       transform: scale(1.02);
     }
+    
+    /* Pulsing animation for Know More button */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+    
+    .pulse-button {
+      animation: pulse 2s infinite;
+    }
+    
+    .pulse-button:hover {
+      animation: none;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body class="glossy-orange-bg">
@@ -323,10 +348,34 @@
         
         <!-- SCROLL TO EXPLORE - moved lower -->
         <div class="mt-32 text-center animate-bounce">
-          <a href="#gathering" class="text-white text-sm flex flex-col items-center gap-1">
+          <a href="#jesus-youth-movement" class="text-white text-sm flex flex-col items-center gap-1">
             SCROLL TO EXPLORE 
             <i class="fas fa-chevron-down"></i>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JESUS YOUTH MOVEMENT SECTION -->
+    <section id="jesus-youth-movement" class="py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-5 md:px-8">
+        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg fade-up border border-white/30 text-center">
+          <!-- Clickable Logo -->
+          <a href="https://jesusyouth.org/" target="_blank" rel="noopener noreferrer" class="inline-block mb-6 transition-transform hover:scale-105">
+            <img src="jesus-youth-logo.png" alt="Jesus Youth International" class="w-40 md:w-52 h-auto mx-auto">
+          </a>
+          
+          <!-- Description -->
+          <p class="text-white text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            Jesus Youth (JY) is an International Catholic Movement, approved by the Holy See.
+          </p>
+          
+          <!-- Know More Button with Pulse Animation -->
+          <div class="mt-8">
+            <a href="https://jesusyouth.org/" target="_blank" rel="noopener noreferrer" class="pulse-button inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-amber-50 font-semibold px-8 py-3 rounded-full shadow-lg transition">
+              Know more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
